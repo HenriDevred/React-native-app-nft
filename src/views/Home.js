@@ -6,7 +6,6 @@ import  { data }  from '../data/data.js';
 
 const Home = () => (
     <View style={styles.container}>
-    <Header />
     <Text style={styles.collection}>Hot collection</Text>
     <NftsList nft={data} />
     </View>
@@ -15,9 +14,11 @@ const Home = () => (
 const styles = StyleSheet.create({
     container: {
         flex: 2,
+        marginTop:20
     },
     collection: {
-        fontWeight: '700',
+        marginLeft:10,
+        fontWeight: '500',
         fontSize: 30,
         marginBottom :20,
     },

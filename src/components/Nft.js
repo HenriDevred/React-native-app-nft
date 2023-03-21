@@ -1,13 +1,17 @@
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 
 const Nft = ({ nft }) => {
+    const navigation = useNavigation()
     return (
             <View style={styles.container}>
                 <View style={styles.imgContainer}>
+                    <Pressable onPress={() => navigation.navigate('Detail', {nft})}>
                     <Image
                         style={styles.img}
                         source={nft.image}
                     />
+                    </Pressable>
                 </View>
                 <Text
                     style={styles.title}
